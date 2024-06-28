@@ -1,0 +1,10 @@
+---
+const res = await fetch("http://swapi.dev/api/people/1");
+const data = await res.json();
+---
+
+<section>
+    <p>The force is strong in: {data.name}</p>
+</section>
+
+

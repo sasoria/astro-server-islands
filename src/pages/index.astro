@@ -1,0 +1,35 @@
+---
+import MyComponent from "../components/MyComponent.astro"
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Astro description" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{"Shell"}</title>
+</head>
+<body>
+	<header>Header</header>
+	<div class="page">
+		<MyComponent server:defer>
+			<div slot="fallback">Loading...</div>
+		</MyComponent>
+	</div>
+	<footer>Footer</footer>
+</body>
+</html>
+
+<style>
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+	}
+	.page {
+		min-height: 20%;
+	}
+</style>
